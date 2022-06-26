@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee" id="WebApp_ID">
+
+	<display-name>Web App</display-name>
+
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<page-encoding>UTF-8</page-encoding>
+		</jsp-property-group>
+	</jsp-config>
+
+	<servlet>
+		<servlet-name>MainServlet</servlet-name>
+		<servlet-class>by.bsuir.webapp.servlet.MainServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PalindromeServlet</servlet-name>
+		<servlet-class>by.bsuir.webapp.servlet.PalindromeServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>WeatherServlet</servlet-name>
+		<servlet-class>by.bsuir.webapp.servlet.WeatherServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>NameFinderServlet</servlet-name>
+		<servlet-class>by.bsuir.webapp.servlet.NameFinderServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MainServlet</servlet-name>
+		<url-pattern>/start</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PalindromeServlet</servlet-name>
+		<url-pattern>/palindrome</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>WeatherServlet</servlet-name>
+		<url-pattern>/weather</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>NameFinderServlet</servlet-name>
+		<url-pattern>/namefinder</url-pattern>
+	</servlet-mapping>
+
+</web-app>
